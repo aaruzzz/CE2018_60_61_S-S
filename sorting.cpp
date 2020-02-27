@@ -35,7 +35,8 @@ void printArray(int arr[], int n)
 /* Driver code */
 int main()  
 {  
-	int l,k;
+	repeat:
+	int l,k,u;
 	cout<<"How many numbers do you want to sort?\n";
 	cin>>l;
     int arr[l];
@@ -48,6 +49,12 @@ int main()
     insertionSort(arr, n);
   	cout<<"\nThe sorted order is:\n\n";  
     printArray(arr, n);  
+    cout<<"\nDo you want to sort again? (1 for yes,2 for no)\n";
+    cin>>u;
+    if(u=1) {goto repeat;}
+    else if(u=2) {goto terminate;}
+    else{cout<<"Type 1 or 2";}    
+    terminate:
     return 0;  
 }  
   
